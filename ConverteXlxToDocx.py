@@ -67,55 +67,55 @@ for i in range(0,30):
     table2.cell(7,0).text='Tomate'
 
 
-   
+    pastYearNew=pastYear.fillna(0)
     #Llenado de los datos
     #Tabla 2
     #maiz
-    table2.cell(1, 1).text = str(pastYear.iloc[i,5])
-    table2.cell(1, 2).text = str(pastYear.iloc[i,6])
+    table2.cell(1, 1).text = str(pastYearNew.iloc[i,5])
+    table2.cell(1, 2).text = str(pastYearNew.iloc[i,6])
     try:
         table2.cell(1, 3).text = str(round(pastYear.iloc[i,6]/pastYear.iloc[i,5],4))
     except ValueError:
-        print("Esta operacion no se puede realizar")
+        table2.cell(1, 3).text = str('0')
    
     
     #Frijoles
-    table2.cell(2, 1).text = str(pastYear.iloc[i,11])
-    table2.cell(2, 2).text = str(pastYear.iloc[i,12])
+    table2.cell(2, 1).text = str(pastYearNew.iloc[i,11])
+    table2.cell(2, 2).text = str(pastYearNew.iloc[i,12])
     try:
         table2.cell(2, 3).text = str(round(pastYear.iloc[i,12]/pastYear.iloc[i,11],4))
     except ValueError:
-        print("Esta operacion no se puede realizar")
+        table2.cell(2, 3).text = str('0')
     
     
     
     #Aji
     table2.cell(3, 1).text = str(18)
-    table2.cell(3, 2).text = str(pastYear.iloc[i,18])
+    table2.cell(3, 2).text = str(pastYearNew.iloc[i,18])
     try:
         table2.cell(3, 3).text = str(round(pastYear.iloc[i,18]/18,4))
     except ValueError:
-        print("Esta operacion no se puede realizar")
+        table2.cell(3, 3).text = str('0')
     
     
         
 
     
     #Platano
-    table2.cell(4, 1).text = str(pastYear.iloc[i,20])
+    table2.cell(4, 1).text = str(pastYearNew.iloc[i,20])
     #table2.cell(1, 2).text = str(pastYear.iloc[i,12])
     #table2.cell(1, 2).text = str(pastYear.iloc[i,12]/pastYear.iloc[i,11])
     #Yuca
-    table2.cell(5, 1).text = str(pastYear.iloc[i,22])
+    table2.cell(5, 1).text = str(pastYearNew.iloc[i,22])
     #Pepino
     #Area sembrada
     table2.cell(6, 1).text = str(18)
-    table2.cell(6, 2).text = str(pastYear.iloc[i,14])
+    table2.cell(6, 2).text = str(pastYearNew.iloc[i,14])
     #rendimiento
     #Tomate
     #Area sembrada
     table2.cell(7, 1).text = str(18)
-    table2.cell(7, 2).text = str(pastYear.iloc[i,16])
+    table2.cell(7, 2).text = str(pastYearNew.iloc[i,16])
     #rendimiento
 
 
